@@ -1,0 +1,120 @@
+import { StyleSheet, Platform } from 'react-native';
+
+const monoFont = Platform.select({
+  ios: 'SFMono-Regular',
+  android: 'monospace',
+  default: 'Courier',
+});
+
+export default StyleSheet.create({
+  input: {
+    height: 45,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    marginBottom: 10,
+    borderRadius: 12,
+    fontFamily: monoFont,
+    fontSize: 14,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 14,
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+    fontFamily: monoFont,
+  },
+    rowButtonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 30,
+    paddingHorizontal: 10,
+  },
+  rectangleButton: {
+    flex: 1,
+    marginHorizontal: 5,
+    height: 120,
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+  rectangleImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
+
+  navBar: {
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  right: 0,
+  height: 60,
+  backgroundColor: '#FFF3C2',
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+  borderTopWidth: 1,
+  borderColor: '#ccc',
+  zIndex: 10,
+    },
+
+  navButton: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  navButtonText: {
+    height: 0,
+    opacity: 0,
+    fontSize: 0,
+  },
+  navIcon: {
+    width: 32,
+    height: 32,
+    resizeMode: 'contain',
+    marginBottom: 4,
+  },
+  avatarContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 15,
+    marginTop: 20,
+    paddingHorizontal: 5,
+    backgroundColor: '#f5f5f5',
+    padding: 10,
+    borderRadius: 6,
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+    backgroundColor: 'transparent',
+    borderWidth: 0,
+    marginRight: 10,
+    marginLeft: 5,
+    marginTop: 20,
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: '#333',
+    fontFamily: monoFont,
+  },
+  quoteText: {
+    fontSize: 16,
+    color: '#666',
+    marginTop: 4,
+    fontStyle: 'italic',
+    maxWidth: 250,
+    fontFamily: monoFont,
+  },
+});
